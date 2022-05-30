@@ -1,2 +1,5 @@
 .ipynb_checkpoints
 data/
+mlruns/
+output/
+/2 - mlflow/mlflow.db
