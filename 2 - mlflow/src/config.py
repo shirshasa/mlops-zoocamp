@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 import yaml
 
@@ -21,6 +22,7 @@ class Configs:
         Get configs from yaml file.
         """
         configs = {}
+        config_file_path = os.path.join(os.path.dirname(__file__), config_file_path)
         with open(config_file_path, encoding='utf-8') as config_file:
             configs = yaml.load(config_file, Loader=yaml.FullLoader)
         return cls(configs)

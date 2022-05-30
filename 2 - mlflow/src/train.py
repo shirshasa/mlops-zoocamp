@@ -16,7 +16,7 @@ def load_pickle(filename: str):
 
 
 def run():
-    mlflow.set_tracking_uri(config.path['tracking_uri'])
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     mlflow.set_experiment(config.experiment['base_train'])
 
     X_train, y_train = load_pickle(os.path.join(config.path['artifacts_path'], "train.pkl"))
@@ -32,4 +32,3 @@ def run():
 
 if __name__ == '__main__':
     run()
-
