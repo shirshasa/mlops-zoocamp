@@ -10,29 +10,3 @@ experiment:
 logger:
   log_path: "log/dump.log"
   log_level: "debug"
-
-# These files provide records of 3 main types of properties
-records_description_tables:
-  comm: 'EXTR_CommBldg.csv'
-  residential: 'EXTR_ResBldg.csv'
-  condo: 'EXTR_CondoUnit2.csv'
-
-sales_table: 'EXTR_RPSale.csv'
-parcel_table: 'EXTR_Parcel.csv'
-
-key_columns:
-  - Major
-  - Minor
-
-# column names in the output table
-column_names:
-  - property_address
-  - property_square_footage
-  - property_year_built
-  - property_type
-
-# Flag to indicate whether to always run full pipeline.
-# If set to False then runs only necessary steps.
-force_rerun: True
-
-output_policy: "csv" # csv, parquet
