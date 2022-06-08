@@ -112,8 +112,7 @@ def main(date: str):
 DeploymentSpec(
     flow=main,
     name="model_training",
-    schedule=CronSchedule(
-        cron="0 9 15 * *"),
+    schedule=CronSchedule(cron="0 9 15 * *"),
     flow_runner=SubprocessFlowRunner(),
     tags=["ml"]
 )
